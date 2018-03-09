@@ -5,4 +5,12 @@ app = Flask(__name__)
 def index():
 	return render_template('index.html')
 
+@app.route('/ninjas')
+def ninja():
+	return render_template('/ninja.html')
+
+@app.route('/dojos/new')
+def newNinja():
+	return render_template('/new.html')
+
 app.run(debug=True)
